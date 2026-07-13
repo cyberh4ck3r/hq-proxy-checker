@@ -29,7 +29,3 @@ this tool uses CORS proxies to validate HTTP/HTTPS connections from the browser.
 ## credits
 
 made by ekv7
-
-## license
-
-[MIT](LICENSE)
