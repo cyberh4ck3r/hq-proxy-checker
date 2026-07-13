@@ -1,8 +1,6 @@
 # HQ Proxy Checker
 
-[![License](https://img.shields.io/github/license/cyberh4ck3r/hq-proxy-checker)](/cyberh4ck3r/hq-proxy-checker/blob/main/LICENSE)
-
-Fast HTTP/HTTPS proxy checker for HQ proxies. Paste proxies, get results, copy working ones.
+Fast HTTP/HTTPS proxy checker for HQ proxies. Paste proxies, get results, copy working ones. Made by ekv7.
 
 ## features
 
@@ -31,7 +29,3 @@ this tool uses CORS proxies to validate HTTP/HTTPS connections from the browser.
 ## credits
 
 made by [ekv7](https://discord.com/users/464170443725733908)
-
-## license
-
-[MIT](LICENSE)
