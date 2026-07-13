@@ -28,4 +28,4 @@ this tool uses CORS proxies to validate HTTP/HTTPS connections from the browser.
 
 ## credits
 
-made by ekv7
+made by [ekv7](https://discord.com/users/464170443725733908)
