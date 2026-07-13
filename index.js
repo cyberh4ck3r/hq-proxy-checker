@@ -89,6 +89,7 @@ async function startCheck() {
 }
 
 function resetUI() {
+  proxyInput.value = '';
   inputSection.classList.remove('hidden');
   checkSection.classList.add('hidden');
   doneSection.classList.add('hidden');
