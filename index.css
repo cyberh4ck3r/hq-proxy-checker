@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a0a0a;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+label code {
+  background: #1a1a1a;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+
+textarea {
+  width: 100%;
+  height: 400px;
+  background: #111;
+  border: 1px solid #222;
+  color: #e0e0e0;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 0.85rem;
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  border-color: #444;
+}
+
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #444;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.toggle-group {
+  display: flex;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.toggle {
+  background: transparent;
+  border: none;
+  color: #666;
+  padding: 8px 18px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.toggle:hover { color: #aaa; }
+
+.toggle.active {
+  background: #e0e0e0;
+  color: #0a0a0a;
+}
+
+button {
+  background: #e0e0e0;
+  color: #0a0a0a;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-left: auto;
+}
+
+button:hover { opacity: 0.85; }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.hidden { display: none; }
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #e0e0e0;
+  transition: width 0.15s;
+}
+
+#progress-text {
+  font-size: 0.75rem;
+  color: #666;
+  display: block;
+  margin-top: 6px;
+}
+
+#results {
+  margin-top: 16px;
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.stat {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.stat.working { background: #0d2818; color: #4ade80; }
+.stat.dead { background: #2a0a0a; color: #f87171; }
+
+#result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#result-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+#result-list::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 4px;
+}
+
+#result-list::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+#result-list::-webkit-scrollbar-thumb:hover {
+  background: #444;
+  cursor: pointer;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+.result-item.working { background: #0d1f14; border-left: 3px solid #4ade80; }
+.result-item.dead { background: #1f0d0d; border-left: 3px solid #f87171; color: #888; }
+.result-item.checking { background: #1a1a1a; border-left: 3px solid #555; }
+
+.result-item .ping {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+#done-section {
+  margin-top: 20px;
+}
+
+#done-section label {
+  margin-bottom: 6px;
+}
+
+#done-section textarea {
+  height: 500px;
+}
+
+.done-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.done-buttons button {
+  margin-left: 0;
+}
+
+#reset-btn {
+  margin-left: auto;
+  background: #333;
+  color: #e0e0e0;
+}
+
+#output {
+  height: 400px;
+  cursor: default;
+}
+
+@media (max-width: 480px) {
+  .options { flex-direction: column; align-items: stretch; }
+  button#check-btn { margin-left: 0; }
+  .toggle-group { justify-content: center; }
+}
